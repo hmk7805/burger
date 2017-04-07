@@ -1,23 +1,21 @@
 {{!--Uneaten Burgers--}}
-<div class="well col-md-3 content" id="newburgerdiv">
+<div class="well col-md-4 content" align="center" id="newburgerdiv">
   <h3>Un-Eaten Burgers!</h3>
-    <ul>
         {{#each burgers}} {{#unless this.eaten}}
-        <li>
-            {{this.name}}
+        <div class="well">
+            <p>{{this.name}}<p/>
 
             <form action="/{{this.uuid}}?_method=PUT" method="POST">
                 <input type="hidden" name="eaten" value="true">
-                <button type="submit" id="eat">Devour It!</button>
+                <button type="submit" class="btn btn-success btn-block" id="eat">Devour It!</button>
             </form>
 
             {{> delete-burger}}
-        </li>
+        </div>
         {{/unless}} {{/each}}
-    </ul>
 </div>
 {{!--Add a Burger--}}
-<div class="well col-md-4 content" id="addaburger">
+<div class="well col-md-3 content" align="center" id="addaburger">
     <h3>Add a Burger</h3>
     <form class="create-update-form">
 
@@ -25,24 +23,22 @@
             <label for="name" style= "alignment: center" >Name:</label>
             <input type="text" id="name" name="name" >
         </div>
-        <button type="submit" id="newBurger">Add Burger</button>
+        <button type="submit" class="btn btn-success btn-block" id="newBurger">Add Burger</button>
     </form>
 </div>
  {{!--Eaten Burgers--}}
-<div class="well col-md-3 content" id="newburgerdiv">
+<div class="well col-md-4 content" align="center" id="newburgerdiv">
     <h3>Eaten Burgers!</h2>
-    <ul>
         {{#each burgers}} {{#if this.eaten}}
-        <li>
-            {{this.name}}
+        <div class="well">
+            <p>{{this.name}}</p>
 
             <form action="/{{this.uuid}}?_method=PUT" method="POST">
                 <input type="hidden" name="eaten" value="false">
-                <button type="submit" id="undo">Un-Do!</button>
+                <button type="submit" class="btn btn-success btn-block" id="undo">Un-Do!</button>
             </form>
 
             {{> delete-burger}}
-        </li>
+        </div>
         {{/if}} {{/each}}
-    </ul>
 </div>

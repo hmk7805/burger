@@ -1,4 +1,18 @@
+body {
+    background-image: url(../img/04_Our-Burger_stack.jpg);
+    background-position: fixed;
+    opacity: .7;
+}
+
 .content {
     margin: 10px;
     align-content: center;
+}
+
+#delete {
+    display: inline;
+}
+
+button {
+    margin: 5px;
 }
