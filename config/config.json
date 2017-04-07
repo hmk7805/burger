@@ -1,9 +1,17 @@
 {
     "development": {
         "username": "g2loaxsyh9xynpua",
-        "password": "c44tbreyimsk7rnw",
+        "password": "u2fzbs68wxlf5ebf",
         "database": "ws6oirpu8bp6ddat",
         "host": "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql"
+    },
+    "hannah": {
+        "username": "root",
+        "password": "hking5484",
+        "database": "burgers",
+        "host": "localhost",
+        "port": 8889,
         "dialect": "mysql"
     },
     "test": {

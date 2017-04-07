@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Burgers</title>    
-        {{!--<!-- jQuery -->--}}
-        <script src="https://code.jquery.com/jquery.js"></script>
 
-        {{!--<!-- bootstrap -->--}}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Burgers</title>
+    {{!--jquery--}}
+    <script src="https://code.jquery.com/jquery.js"></script>
 
-        {{!--<!-- Font Awesome Glyphicons -->--}}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-        
-        {{!--local js--}}
-        <script src="assets/js/main.js"></script>
+    {{!--bootstrap style and css--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-        {{!--<!-- local css -->--}}
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+    {{!--Font Awesome Glyphicons--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> {{!--local js--}}
+    <script src="assets/js/main.js"></script>
+
+    {{!-- local css --}}
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    {{!--Header--}}
+    {{> nav/navbar}}
+
+    {{!--content --}}
+    <div class="container container-fluid">
+        <div class="panel">
+            <div class="panel-heading ">
+                <h1 align="center"> What kind of burger would you like? </h1>
+            </div>
+            <div class="panel-body">
+                {{{ body }}}
+            </div>
+        </div>
+    </div>
+
+    {{!--Footer--}}
+    {{> foot/footer}}
+    
+</body>
+
 </html>
